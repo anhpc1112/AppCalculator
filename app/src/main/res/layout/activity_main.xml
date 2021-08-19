@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBlack"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvDisplay"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/dp_160"
+        android:background="@color/colorWhite"
+        android:ellipsize="start"
+        android:gravity="end"
+        android:singleLine="true"
+        android:textSize="@dimen/sp_40"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/tvClear"
+        style="@style/ActionButton"
+        android:text="@string/text_ce"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/dp_50"
+        android:layout_marginStart="@dimen/dp_2"
+        android:background="@color/colorLightBlack"
+        app:layout_constraintEnd_toStartOf="@+id/tvBack"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDisplay">
+    </TextView>
+
+    <TextView
+        android:id="@+id/tvBack"
+        style="@style/ActionButton"
+        android:layout_width="@dimen/dp_100"
+        android:layout_height="@dimen/dp_50"
+        android:layout_marginStart="@dimen/dp_2"
+        android:layout_marginLeft="@dimen/dp_2"
+        android:layout_marginEnd="@dimen/dp_2"
+        android:layout_marginRight="@dimen/dp_2"
+        android:background="@color/colorLightBlack"
+        android:text="@string/text_back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvClear"
+        app:layout_constraintTop_toBottomOf="@+id/tvDisplay" />
+
+    <TextView
+        android:id="@+id/tvDiv"
+        style="@style/ActionButton"
+        android:layout_marginTop="@dimen/dp_2"
+        android:layout_marginEnd="@dimen/dp_2"
+        android:layout_marginBottom="@dimen/dp_2"
+        android:text="@string/text_div"
+        app:layout_constraintBottom_toTopOf="@+id/tvMulti"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvNine"
+        app:layout_constraintStart_toStartOf="@+id/tvBack"
+        app:layout_constraintTop_toBottomOf="@+id/tvBack" />
+
+    <TextView
+        android:id="@+id/tvPlus"
+        style="@style/ActionButton"
+        android:layout_marginTop="@dimen/dp_2"
+        android:layout_marginBottom="@dimen/dp_2"
+        android:text="@string/text_plus"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/tvSub"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tvSub"
+        app:layout_constraintTop_toBottomOf="@+id/tvSub" />
+
+    <TextView
+        android:id="@+id/tvMulti"
+        style="@style/ActionButton"
+        android:text="@string/text_mul"
+        app:layout_constraintBottom_toTopOf="@+id/tvSub"
+        app:layout_constraintEnd_toEndOf="@+id/tvDiv"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tvDiv"
+        app:layout_constraintTop_toBottomOf="@+id/tvDiv" />
+
+    <TextView
+        android:id="@+id/tvSub"
+        style="@style/ActionButton"
+        android:layout_marginTop="@dimen/dp_2"
+        android:text="@string/text_sub"
+        app:layout_constraintBottom_toTopOf="@+id/tvPlus"
+        app:layout_constraintEnd_toEndOf="@+id/tvMulti"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tvMulti"
+        app:layout_constraintTop_toBottomOf="@+id/tvMulti" />
+
+    <TextView
+        android:id="@+id/tvSeven"
+        style="@style/DigitButton"
+        android:layout_marginStart="@dimen/dp_2"
+        android:layout_marginTop="@dimen/dp_2"
+        android:text="@string/text_7"
+        app:layout_constraintBottom_toTopOf="@+id/tvFour"
+        app:layout_constraintEnd_toStartOf="@+id/tvEight"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvClear" />
+
+    <TextView
+        android:id="@+id/tvEight"
+        style="@style/DigitButton"
+        android:layout_marginStart="@dimen/dp_2"
+        android:layout_marginTop="@dimen/dp_2"
+        android:text="@string/text_8"
+        app:layout_constraintBottom_toTopOf="@+id/tvFive"
+        app:layout_constraintEnd_toStartOf="@+id/tvNine"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvSeven"
+        app:layout_constraintTop_toBottomOf="@+id/tvClear" />
+
+    <TextView
+        android:id="@+id/tvNine"
+        style="@style/DigitButton"
+        android:layout_marginStart="@dimen/dp_2"
+        android:layout_marginLeft="@dimen/dp_2"
+        android:layout_marginTop="@dimen/dp_2"
+        android:layout_marginEnd="@dimen/dp_2"
+        android:layout_marginRight="@dimen/dp_2"
+        android:text="@string/text_9"
+        app:layout_constraintBottom_toTopOf="@+id/tvSix"
+        app:layout_constraintEnd_toStartOf="@+id/tvDiv"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvEight"
+        app:layout_constraintTop_toBottomOf="@+id/tvClear" />
+
+    <TextView
+        android:id="@+id/tvSix"
+        style="@style/DigitButton"
+        android:layout_marginTop="@dimen/dp_2"
+        android:layout_marginEnd="@dimen/dp_2"
+        android:text="@string/text_6"
+        app:layout_constraintBottom_toTopOf="@+id/tvThree"
+        app:layout_constraintEnd_toStartOf="@+id/tvMulti"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvFive"
+        app:layout_constraintTop_toBottomOf="@+id/tvNine" />
+
+    <TextView
+        android:id="@+id/tvFive"
+        style="@style/DigitButton"
+        android:layout_marginTop="@dimen/dp_2"
+        android:layout_marginEnd="@dimen/dp_2"
+        android:text="@string/text_5"
+        app:layout_constraintBottom_toTopOf="@+id/tvTwo"
+        app:layout_constraintEnd_toStartOf="@+id/tvSix"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvFour"
+        app:layout_constraintTop_toBottomOf="@+id/tvEight" />
+
+    <TextView
+        android:id="@+id/tvFour"
+        style="@style/DigitButton"
+        android:layout_marginStart="@dimen/dp_2"
+        android:layout_marginLeft="@dimen/dp_2"
+        android:layout_marginTop="@dimen/dp_2"
+        android:layout_marginEnd="@dimen/dp_2"
+        android:layout_marginRight="@dimen/dp_2"
+        android:text="@string/text_4"
+        app:layout_constraintBottom_toTopOf="@+id/tvOne"
+        app:layout_constraintEnd_toStartOf="@+id/tvFive"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSeven" />
+
+    <TextView
+        android:id="@+id/tvThree"
+        style="@style/DigitButton"
+        android:layout_marginTop="@dimen/dp_2"
+        android:layout_marginEnd="@dimen/dp_2"
+        android:text="@string/text_3"
+        app:layout_constraintBottom_toTopOf="@+id/tvEquals"
+        app:layout_constraintEnd_toStartOf="@+id/tvSub"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvTwo"
+        app:layout_constraintTop_toBottomOf="@+id/tvSix" />
+
+    <TextView
+        android:id="@+id/tvTwo"
+        style="@style/DigitButton"
+        android:layout_marginTop="@dimen/dp_2"
+        android:layout_marginEnd="@dimen/dp_2"
+        android:text="@string/text_2"
+        app:layout_constraintBottom_toTopOf="@+id/tvZero"
+        app:layout_constraintEnd_toStartOf="@+id/tvThree"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvOne"
+        app:layout_constraintTop_toBottomOf="@+id/tvFive" />
+
+    <TextView
+        android:id="@+id/tvOne"
+        style="@style/DigitButton"
+        android:layout_marginStart="@dimen/dp_2"
+        android:layout_marginLeft="@dimen/dp_2"
+        android:layout_marginTop="@dimen/dp_2"
+        android:layout_marginEnd="@dimen/dp_2"
+        android:layout_marginRight="@dimen/dp_2"
+        android:text="@string/text_1"
+        app:layout_constraintBottom_toTopOf="@+id/tvDot"
+        app:layout_constraintEnd_toStartOf="@+id/tvTwo"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvFour" />
+
+    <TextView
+        android:id="@+id/tvEquals"
+        style="@style/ActionButton"
+        android:layout_marginTop="@dimen/dp_2"
+        android:layout_marginEnd="@dimen/dp_2"
+        android:layout_marginBottom="@dimen/dp_2"
+        android:text="@string/text_equal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tvPlus"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvZero"
+        app:layout_constraintTop_toBottomOf="@+id/tvThree" />
+
+    <TextView
+        android:id="@+id/tvZero"
+        style="@style/DigitButton"
+        android:layout_marginTop="@dimen/dp_2"
+        android:layout_marginEnd="@dimen/dp_2"
+        android:layout_marginBottom="@dimen/dp_2"
+        android:text="@string/text_0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tvEquals"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvDot"
+        app:layout_constraintTop_toBottomOf="@+id/tvTwo" />
+
+    <TextView
+        android:id="@+id/tvDot"
+        style="@style/ActionButton"
+        android:layout_marginStart="@dimen/dp_2"
+        android:layout_marginLeft="@dimen/dp_2"
+        android:layout_marginTop="@dimen/dp_2"
+        android:layout_marginEnd="@dimen/dp_2"
+        android:layout_marginRight="@dimen/dp_2"
+        android:layout_marginBottom="@dimen/dp_2"
+        android:text="@string/text_dot"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tvZero"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvOne" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
