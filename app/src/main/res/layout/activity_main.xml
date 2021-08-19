@@ -4,44 +4,47 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorBlack"
+    android:background="@color/black"
     tools:context=".MainActivity">
 
+
     <TextView
-        android:id="@+id/tvDisplay"
-        android:layout_width="@dimen/dp_0"
-        android:layout_height="@dimen/dp_160"
-        android:background="@color/colorWhite"
-        android:ellipsize="start"
+        android:id="@+id/textDisplay"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/white"
         android:gravity="end"
-        android:singleLine="true"
         android:textSize="@dimen/sp_40"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHeight_percent="0.25"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
     </TextView>
 
     <TextView
-        android:id="@+id/tvClear"
+        android:id="@+id/textClear"
         style="@style/ActionButton"
         android:text="@string/text_ce"
-        android:layout_width="@dimen/dp_0"
-        android:layout_height="@dimen/dp_50"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginStart="@dimen/dp_2"
+        app:layout_constraintHeight_percent="0.1"
         android:background="@color/colorLightBlack"
-        app:layout_constraintEnd_toStartOf="@+id/tvBack"
+        app:layout_constraintEnd_toStartOf="@+id/textBack"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvDisplay">
+        app:layout_constraintTop_toBottomOf="@+id/textDisplay">
     </TextView>
 
+
     <TextView
-        android:id="@+id/tvBack"
+        android:id="@+id/textBack"
         style="@style/ActionButton"
-        android:layout_width="@dimen/dp_100"
-        android:layout_height="@dimen/dp_50"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.1"
         android:layout_marginStart="@dimen/dp_2"
         android:layout_marginLeft="@dimen/dp_2"
         android:layout_marginEnd="@dimen/dp_2"
@@ -50,83 +53,83 @@
         android:text="@string/text_back"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/tvClear"
-        app:layout_constraintTop_toBottomOf="@+id/tvDisplay" />
+        app:layout_constraintStart_toEndOf="@+id/textClear"
+        app:layout_constraintTop_toBottomOf="@+id/textDisplay" />
 
     <TextView
-        android:id="@+id/tvDiv"
+        android:id="@+id/textDiv"
         style="@style/ActionButton"
         android:layout_marginTop="@dimen/dp_2"
         android:layout_marginEnd="@dimen/dp_2"
         android:layout_marginBottom="@dimen/dp_2"
         android:text="@string/text_div"
-        app:layout_constraintBottom_toTopOf="@+id/tvMulti"
+        app:layout_constraintBottom_toTopOf="@+id/textMulti"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/tvNine"
-        app:layout_constraintStart_toStartOf="@+id/tvBack"
-        app:layout_constraintTop_toBottomOf="@+id/tvBack" />
+        app:layout_constraintStart_toEndOf="@+id/textNine"
+        app:layout_constraintStart_toStartOf="@+id/textBack"
+        app:layout_constraintTop_toBottomOf="@+id/textBack" />
 
     <TextView
-        android:id="@+id/tvPlus"
+        android:id="@+id/textPlus"
         style="@style/ActionButton"
         android:layout_marginTop="@dimen/dp_2"
         android:layout_marginBottom="@dimen/dp_2"
         android:text="@string/text_plus"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/tvSub"
+        app:layout_constraintEnd_toEndOf="@+id/textSub"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/tvSub"
-        app:layout_constraintTop_toBottomOf="@+id/tvSub" />
+        app:layout_constraintStart_toStartOf="@+id/textSub"
+        app:layout_constraintTop_toBottomOf="@+id/textSub" />
 
     <TextView
-        android:id="@+id/tvMulti"
+        android:id="@+id/textMulti"
         style="@style/ActionButton"
         android:text="@string/text_mul"
-        app:layout_constraintBottom_toTopOf="@+id/tvSub"
-        app:layout_constraintEnd_toEndOf="@+id/tvDiv"
+        app:layout_constraintBottom_toTopOf="@+id/textSub"
+        app:layout_constraintEnd_toEndOf="@+id/textDiv"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/tvDiv"
-        app:layout_constraintTop_toBottomOf="@+id/tvDiv" />
+        app:layout_constraintStart_toStartOf="@+id/textDiv"
+        app:layout_constraintTop_toBottomOf="@+id/textDiv" />
 
     <TextView
-        android:id="@+id/tvSub"
+        android:id="@+id/textSub"
         style="@style/ActionButton"
         android:layout_marginTop="@dimen/dp_2"
         android:text="@string/text_sub"
-        app:layout_constraintBottom_toTopOf="@+id/tvPlus"
-        app:layout_constraintEnd_toEndOf="@+id/tvMulti"
+        app:layout_constraintBottom_toTopOf="@+id/textPlus"
+        app:layout_constraintEnd_toEndOf="@+id/textMulti"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/tvMulti"
-        app:layout_constraintTop_toBottomOf="@+id/tvMulti" />
+        app:layout_constraintStart_toStartOf="@+id/textMulti"
+        app:layout_constraintTop_toBottomOf="@+id/textMulti" />
 
     <TextView
-        android:id="@+id/tvSeven"
+        android:id="@+id/textSeven"
         style="@style/DigitButton"
         android:layout_marginStart="@dimen/dp_2"
         android:layout_marginTop="@dimen/dp_2"
         android:text="@string/text_7"
-        app:layout_constraintBottom_toTopOf="@+id/tvFour"
-        app:layout_constraintEnd_toStartOf="@+id/tvEight"
+        app:layout_constraintBottom_toTopOf="@+id/textFour"
+        app:layout_constraintEnd_toStartOf="@+id/textEight"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_chainStyle="spread_inside"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvClear" />
+        app:layout_constraintTop_toBottomOf="@+id/textClear" />
 
     <TextView
-        android:id="@+id/tvEight"
+        android:id="@+id/textEight"
         style="@style/DigitButton"
         android:layout_marginStart="@dimen/dp_2"
         android:layout_marginTop="@dimen/dp_2"
         android:text="@string/text_8"
-        app:layout_constraintBottom_toTopOf="@+id/tvFive"
-        app:layout_constraintEnd_toStartOf="@+id/tvNine"
+        app:layout_constraintBottom_toTopOf="@+id/textFive"
+        app:layout_constraintEnd_toStartOf="@+id/textNine"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/tvSeven"
-        app:layout_constraintTop_toBottomOf="@+id/tvClear" />
+        app:layout_constraintStart_toEndOf="@+id/textSeven"
+        app:layout_constraintTop_toBottomOf="@+id/textClear" />
 
     <TextView
-        android:id="@+id/tvNine"
+        android:id="@+id/textNine"
         style="@style/DigitButton"
         android:layout_marginStart="@dimen/dp_2"
         android:layout_marginLeft="@dimen/dp_2"
@@ -134,38 +137,38 @@
         android:layout_marginEnd="@dimen/dp_2"
         android:layout_marginRight="@dimen/dp_2"
         android:text="@string/text_9"
-        app:layout_constraintBottom_toTopOf="@+id/tvSix"
-        app:layout_constraintEnd_toStartOf="@+id/tvDiv"
+        app:layout_constraintBottom_toTopOf="@+id/textSix"
+        app:layout_constraintEnd_toStartOf="@+id/textDiv"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/tvEight"
-        app:layout_constraintTop_toBottomOf="@+id/tvClear" />
+        app:layout_constraintStart_toEndOf="@+id/textEight"
+        app:layout_constraintTop_toBottomOf="@+id/textClear" />
 
     <TextView
-        android:id="@+id/tvSix"
+        android:id="@+id/textSix"
         style="@style/DigitButton"
         android:layout_marginTop="@dimen/dp_2"
         android:layout_marginEnd="@dimen/dp_2"
         android:text="@string/text_6"
-        app:layout_constraintBottom_toTopOf="@+id/tvThree"
-        app:layout_constraintEnd_toStartOf="@+id/tvMulti"
+        app:layout_constraintBottom_toTopOf="@+id/textThree"
+        app:layout_constraintEnd_toStartOf="@+id/textMulti"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/tvFive"
-        app:layout_constraintTop_toBottomOf="@+id/tvNine" />
+        app:layout_constraintStart_toEndOf="@+id/textFive"
+        app:layout_constraintTop_toBottomOf="@+id/textNine" />
 
     <TextView
-        android:id="@+id/tvFive"
+        android:id="@+id/textFive"
         style="@style/DigitButton"
         android:layout_marginTop="@dimen/dp_2"
         android:layout_marginEnd="@dimen/dp_2"
         android:text="@string/text_5"
-        app:layout_constraintBottom_toTopOf="@+id/tvTwo"
-        app:layout_constraintEnd_toStartOf="@+id/tvSix"
+        app:layout_constraintBottom_toTopOf="@+id/textTwo"
+        app:layout_constraintEnd_toStartOf="@+id/textSix"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/tvFour"
-        app:layout_constraintTop_toBottomOf="@+id/tvEight" />
+        app:layout_constraintStart_toEndOf="@+id/textFour"
+        app:layout_constraintTop_toBottomOf="@+id/textEight" />
 
     <TextView
-        android:id="@+id/tvFour"
+        android:id="@+id/textFour"
         style="@style/DigitButton"
         android:layout_marginStart="@dimen/dp_2"
         android:layout_marginLeft="@dimen/dp_2"
@@ -173,38 +176,38 @@
         android:layout_marginEnd="@dimen/dp_2"
         android:layout_marginRight="@dimen/dp_2"
         android:text="@string/text_4"
-        app:layout_constraintBottom_toTopOf="@+id/tvOne"
-        app:layout_constraintEnd_toStartOf="@+id/tvFive"
+        app:layout_constraintBottom_toTopOf="@+id/textOne"
+        app:layout_constraintEnd_toStartOf="@+id/textFive"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvSeven" />
+        app:layout_constraintTop_toBottomOf="@+id/textSeven" />
 
     <TextView
-        android:id="@+id/tvThree"
+        android:id="@+id/textThree"
         style="@style/DigitButton"
         android:layout_marginTop="@dimen/dp_2"
         android:layout_marginEnd="@dimen/dp_2"
         android:text="@string/text_3"
-        app:layout_constraintBottom_toTopOf="@+id/tvEquals"
-        app:layout_constraintEnd_toStartOf="@+id/tvSub"
+        app:layout_constraintBottom_toTopOf="@+id/textEquals"
+        app:layout_constraintEnd_toStartOf="@+id/textSub"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/tvTwo"
-        app:layout_constraintTop_toBottomOf="@+id/tvSix" />
+        app:layout_constraintStart_toEndOf="@+id/textTwo"
+        app:layout_constraintTop_toBottomOf="@+id/textSix" />
 
     <TextView
-        android:id="@+id/tvTwo"
+        android:id="@+id/textTwo"
         style="@style/DigitButton"
         android:layout_marginTop="@dimen/dp_2"
         android:layout_marginEnd="@dimen/dp_2"
         android:text="@string/text_2"
-        app:layout_constraintBottom_toTopOf="@+id/tvZero"
-        app:layout_constraintEnd_toStartOf="@+id/tvThree"
+        app:layout_constraintBottom_toTopOf="@+id/textZero"
+        app:layout_constraintEnd_toStartOf="@+id/textThree"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/tvOne"
-        app:layout_constraintTop_toBottomOf="@+id/tvFive" />
+        app:layout_constraintStart_toEndOf="@+id/textOne"
+        app:layout_constraintTop_toBottomOf="@+id/textFive" />
 
     <TextView
-        android:id="@+id/tvOne"
+        android:id="@+id/textOne"
         style="@style/DigitButton"
         android:layout_marginStart="@dimen/dp_2"
         android:layout_marginLeft="@dimen/dp_2"
@@ -212,40 +215,40 @@
         android:layout_marginEnd="@dimen/dp_2"
         android:layout_marginRight="@dimen/dp_2"
         android:text="@string/text_1"
-        app:layout_constraintBottom_toTopOf="@+id/tvDot"
-        app:layout_constraintEnd_toStartOf="@+id/tvTwo"
+        app:layout_constraintBottom_toTopOf="@+id/textDot"
+        app:layout_constraintEnd_toStartOf="@+id/textTwo"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvFour" />
+        app:layout_constraintTop_toBottomOf="@+id/textFour" />
 
     <TextView
-        android:id="@+id/tvEquals"
+        android:id="@+id/textEquals"
         style="@style/ActionButton"
         android:layout_marginTop="@dimen/dp_2"
         android:layout_marginEnd="@dimen/dp_2"
         android:layout_marginBottom="@dimen/dp_2"
         android:text="@string/text_equal"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/tvPlus"
+        app:layout_constraintEnd_toStartOf="@+id/textPlus"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/tvZero"
-        app:layout_constraintTop_toBottomOf="@+id/tvThree" />
+        app:layout_constraintStart_toEndOf="@+id/textZero"
+        app:layout_constraintTop_toBottomOf="@+id/textThree" />
 
     <TextView
-        android:id="@+id/tvZero"
+        android:id="@+id/textZero"
         style="@style/DigitButton"
         android:layout_marginTop="@dimen/dp_2"
         android:layout_marginEnd="@dimen/dp_2"
         android:layout_marginBottom="@dimen/dp_2"
         android:text="@string/text_0"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/tvEquals"
+        app:layout_constraintEnd_toStartOf="@+id/textEquals"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/tvDot"
-        app:layout_constraintTop_toBottomOf="@+id/tvTwo" />
+        app:layout_constraintStart_toEndOf="@+id/textDot"
+        app:layout_constraintTop_toBottomOf="@+id/textTwo" />
 
     <TextView
-        android:id="@+id/tvDot"
+        android:id="@+id/textDot"
         style="@style/ActionButton"
         android:layout_marginStart="@dimen/dp_2"
         android:layout_marginLeft="@dimen/dp_2"
@@ -255,9 +258,9 @@
         android:layout_marginBottom="@dimen/dp_2"
         android:text="@string/text_dot"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/tvZero"
+        app:layout_constraintEnd_toStartOf="@+id/textZero"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvOne" />
+        app:layout_constraintTop_toBottomOf="@+id/textOne" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
